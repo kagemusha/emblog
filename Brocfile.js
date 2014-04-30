@@ -13,7 +13,9 @@ var app = new EmberApp({
     'ember-data.js',
     'app-shims.js',
     'ember-resolver.js',
-    'ember-load-initializers.js'
+    'ember-load-initializers.js',
+    'ember-simple-auth.js',
+    'ember-simple-auth-oauth2.js'
   ],
 
   // AKA whitelisted modules
