@@ -15,7 +15,8 @@ var app = new EmberApp({
     'ember-resolver.js',
     'ember-load-initializers.js',
     'ember-simple-auth.js',
-    'ember-simple-auth-oauth2.js'
+    'ember-simple-auth-oauth2.js',
+    'moment.js'
   ],
 
   // AKA whitelisted modules
