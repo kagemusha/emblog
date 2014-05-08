@@ -1,0 +1,16 @@
+<div id="top-nav">
+  <div class="nav-item">
+    <div id="title" {{action "index"}}>Emblog</div>
+  </div>
+  <div class="nav-item">
+    {{#if session.isAuthenticated}}
+      Logged in as {{identification}}&nbsp;
+      <button {{action 'invalidateSession'}} class="topcoat-button">Logout</button>
+    {{else}}
+      Not logged in&nbsp;&nbsp;
+      <button {{action 'authenticateSession' }} class="topcoat-button">Login</button>
+      &nbsp;or&nbsp;
+      {{#link-to "registration"}}Register{{/link-to}}
+    {{/if}}
+  </div>
+</div>
