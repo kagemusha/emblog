@@ -1,3 +1,24 @@
 html, body {
-  margin: 20px;
+  margin:  0;
+  padding: 0;
+}
+
+#top-nav {
+  background: #282828;
+  color: white;
+  height: 30px;
+  padding: 4px 20px;
+  display: flex;
+  justify-content: space-between;
+  #title {
+    font-size: 18px;
+    color: cyan;
+  }
+}
+
+#content {
+  margin: 6px 20px;
+}
+
+.nav-item {
 }
