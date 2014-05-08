@@ -1,0 +1,8 @@
+<h3>Posts</h3>
+<ul>
+  {{#each post in sortedPosts}}
+    <li>
+      {{render "posts/post" post}}
+    </li>
+  {{/each}}
+</ul>
