@@ -7,6 +7,7 @@ auth =
   initialize: (container, application) ->
     Em.SimpleAuth.setup container, application, {
       crossOriginWhitelist: ['http://localhost:3000']
+      authorizerFactory: 'authorizer:oauth2-bearer'
     }
 
     Em.SimpleAuth.Authenticators.OAuth2.reopen
