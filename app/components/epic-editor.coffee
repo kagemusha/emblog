@@ -5,8 +5,8 @@ Obj = Em.Component.extend
       basePath: "/assets/epiceditor/themes/"
       theme:
         base: 'base/epiceditor.css'
-        preview: 'editor/epic-dark.css'
-        editor: 'preview/github.css'
+        editor: 'editor/epic-light.css'
+        preview: 'preview/github.css'
     }
     editor = new EpicEditor(opts)
     editor.load()
