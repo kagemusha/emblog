@@ -1,5 +1,7 @@
-{{#if session.isAuthenticated}}
-  <a {{ action 'invalidateSession' }}>Logout</a>
-{{else}}
-  <a {{ action 'authenticateSession' }}>Login</a>
-{{/if}}
+<ul>
+  {{#each post in sortedPosts}}
+    <li>
+      {{render "posts/post" post}}
+    </li>
+  {{/each}}
+</ul>
