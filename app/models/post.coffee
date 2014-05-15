@@ -2,7 +2,8 @@ attr = DS.attr
 
 Obj = DS.Model.extend
   title: attr('string', {defaultValue: ""}),
-  body: attr()
+  markdown: attr()
+  html: attr()
   createdAt: attr()
   #author: DS.belongsTo("user")
   #comments: DS.hasMany("comments")
