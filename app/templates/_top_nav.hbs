@@ -4,7 +4,7 @@
   </div>
   <div class="nav-item">
     {{#if session.isAuthenticated}}
-      Logged in as {{identification}}&nbsp;
+      Logged in as {{loggedInName}}&nbsp;
       <button {{action 'invalidateSession'}} class="topcoat-button">Logout</button>
     {{else}}
       Not logged in&nbsp;&nbsp;
