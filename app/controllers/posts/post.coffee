@@ -7,6 +7,6 @@ Controller = Em.ObjectController.extend
       createdTime.fromNow()
     else
       createdTime.format('MMMM Do YYYY, h:mm a')
-  ).property()
+  ).property('createdAt')
 
 `export default Controller`
