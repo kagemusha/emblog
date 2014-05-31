@@ -2,7 +2,7 @@ Obj = Ember.Route.extend Ember.SimpleAuth.ApplicationRouteMixin,
 
   getCurrentUser: ->
     @store.find("user", "current_user").then( (user)=>
-      @controllerFor("application").set "currentUser", user
+      @get("session").set("currentUser", user)
       # em data creates a rec w id current_user. since what we're returning doesn't
       # have this id, this rec hangs around and needs to be cleaned up
       @store.unloadRecord _this.store.getById("user", "current_user")

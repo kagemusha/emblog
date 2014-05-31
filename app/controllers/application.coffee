@@ -1,8 +1,6 @@
 Controller = Em.Controller.extend
-  needs: ['application']
-  currentUser: null
   loggedInName: (->
-    @get("currentUser.email") or ""
-  ).property("currentUser")
+    @get("session.currentUser.email") or ""
+  ).property("session.currentUser")
 
 `export default Controller`
