@@ -2,8 +2,9 @@ attr = DS.attr
 
 Obj = DS.Model.extend
   email: attr()
-  isContributor: attr()
   name: attr()
+
+  isContributor: attr()
   posts: DS.hasMany("post")
   #comments: DS.hasMany("comments")
 

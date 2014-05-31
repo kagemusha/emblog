@@ -1,0 +1,18 @@
+<h3>My Drafts</h3>
+
+<ul>
+  {{#each post in drafts}}
+    <li>
+      {{render "posts/post" post}}
+    </li>
+  {{/each}}
+</ul>
+
+<h3>Published Posts</h3>
+<ul>
+  {{#each post in published}}
+    <li>
+      {{render "posts/post" post}}
+    </li>
+  {{/each}}
+</ul>
