@@ -18,9 +18,6 @@ Obj = Em.Component.extend
     ))
   ).on("didInsertElement")
 
-  action:
-    save: ->
-      console.log "save editing markedown"
 
 
 `export default Obj`
