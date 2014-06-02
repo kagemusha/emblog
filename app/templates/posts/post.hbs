@@ -1,3 +1,7 @@
-{{#link-to "post" model}} {{title}}{{/link-to}}
+{{#if model.published}}
+  {{#link-to "post" model}} {{title}}{{/link-to}}
+{{else}}
+  {{#link-to "post.edit" model}} {{title}}{{/link-to}}
+{{/if}}
 &nbsp;&nbsp;
 {{fmtCreatedAt}}

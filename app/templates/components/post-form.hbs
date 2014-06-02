@@ -1,0 +1,10 @@
+<h3>
+  <button {{action "save"}} class="topcoat-button--cta" >Save</button>
+  <button {{action "publish"}} class="topcoat-button--cta" >Publish</button>
+</h3>
+
+<br/>
+{{input type='text' id="title-input" placeholder='Title' value=model.title class="topcoat-text-input--large"}}
+<br/>
+<br/>
+{{epic-editor id="epic-editor" markdown=model.markdown}}

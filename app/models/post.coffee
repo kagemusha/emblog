@@ -5,6 +5,7 @@ Obj = DS.Model.extend
   markdown: attr()
   html: attr()
   status: attr()
+  published: Em.computed.equal("status", "published")
   createdAt: attr()
   #author: DS.belongsTo("user")
   #comments: DS.hasMany("comments")

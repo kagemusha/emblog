@@ -11,10 +11,10 @@ Obj = Em.Component.extend
     }
     editor = new EpicEditor(opts)
     editor.load()
-    editor.getElement('editor').body.innerText = @get("content") || ""
+    editor.getElement('editor').body.innerText = @get("markdown") || ""
     editor.on('update', (=>
       markdown = editor.getElement('editor').body.innerText
-      @set "content", markdown
+      @set "markdown", markdown
     ))
     @set "editor", editor
   ).on("didInsertElement")
