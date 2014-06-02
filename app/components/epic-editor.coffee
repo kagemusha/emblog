@@ -1,5 +1,6 @@
 Obj = Em.Component.extend
   onInsert: (->
+    #probably want to pull these options from somewhere else, but leave here for now
     opts =  {
       container: "epic-editor"
       basePath: "/assets/epiceditor/themes/"
@@ -10,11 +11,16 @@ Obj = Em.Component.extend
     }
     editor = new EpicEditor(opts)
     editor.load()
-    editor.getElement('editor').body.innerHTML = @get("content") || ""
+    editor.getElement('editor').body.innerText = @get("content") || ""
     editor.on('update', (=>
-      @set "content", editor.getElement('editor').body.innerHTML
+      markdown = editor.getElement('editor').body.innerText
+      @set "content", markdown
     ))
   ).on("didInsertElement")
+
+  action:
+    save: ->
+      console.log "save editing markedown"
 
 
 `export default Obj`

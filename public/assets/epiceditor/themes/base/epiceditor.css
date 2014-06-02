@@ -1,6 +1,15 @@
 html, body, iframe, div {
   margin:0;
   padding:0;
+  text-shadow: none;
+  border-radius: 6px;
+}
+body {
+  border: 1px solid gray;
+}
+
+body:focus {
+  background: blue;
 }
 
 #epiceditor-utilbar {
