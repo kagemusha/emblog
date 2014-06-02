@@ -16,8 +16,12 @@ Obj = Em.Component.extend
       markdown = editor.getElement('editor').body.innerText
       @set "content", markdown
     ))
+    @set "editor", editor
   ).on("didInsertElement")
 
+  willDestroyElement: ->
+    @_super()
+    @get("editor").unload()
 
 
 `export default Obj`
