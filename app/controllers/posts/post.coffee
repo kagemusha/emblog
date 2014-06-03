@@ -9,4 +9,7 @@ Controller = Em.ObjectController.extend
       createdTime.format('MMMM Do YYYY, h:mm a')
   ).property('createdAt')
 
+  actions:
+    delete: ->
+      @get("model").destroyRecord();
 `export default Controller`

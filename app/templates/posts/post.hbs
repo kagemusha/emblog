@@ -5,3 +5,6 @@
 {{/if}}
 &nbsp;&nbsp;
 {{fmtCreatedAt}}
+{{#unless model.published}}
+  <button {{action "delete"}}>Delete</button>
+{{/unless}}
