@@ -1,4 +1,4 @@
-Obj = Em.Component.extend
+Obj = Em.Controller.extend
 
   parser: (->
     (new EpicEditor()).settings.parser
@@ -10,8 +10,10 @@ Obj = Em.Component.extend
     model.set "html", html
     model.set "status", "published" if publish
     model.save().then( =>
-      action = if publish then "published" else "saved"
-      @sendAction action
+      if publish
+        @transitionToRoute "posts.my"
+      else
+        #some status msg
     ).catch( (reason)->
       console.log "failure saving post: "
       console.log reason
