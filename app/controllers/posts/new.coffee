@@ -5,12 +5,8 @@ Controller = Em.ObjectController.extend
   ).property()
 
   actions:
-    save: ->
-      #console.log "HTML: #{")}"
-      model = @get('model')
-      html = @get('parser')(model.get "markdown")
-      model.set "html", html
-      model.save()
-
+    published: ->
+      console.log "published"
+      @transitionToRoute "posts.my"
 
 `export default Controller`
