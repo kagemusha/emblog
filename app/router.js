@@ -3,6 +3,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('unkown', {path: '/*wildcard'});
+
   this.route("login");
   this.route("registration");
 
