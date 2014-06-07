@@ -9,8 +9,8 @@
 
     {{BASE_TAG}}
 
-    <link rel="stylesheet" href="assets/emblog.css">
     <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/emblog.css">
     <link rel="stylesheet" href="assets/qunit.css">
     <style>
       #ember-testing-container {
@@ -37,11 +37,12 @@
       window.ENV = {{ENV}};
     </script>
     <script src="assets/qunit.js"></script>
+    <script src="assets/qunit-notifications.js"></script>
     <script src="assets/emblog.js"></script>
     <script src="testem.js"></script>
     <script>
       require('emblog/tests/test-helper');
-      require('emblog/tests/test-loader');
     </script>
+    <script src="assets/test-loader.js"></script>
   </body>
 </html>

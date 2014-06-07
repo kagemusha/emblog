@@ -1,3 +1,5 @@
+/* jshint node: true */
+
 module.exports = function(environment) {
   var ENV = {
     baseURL: '/',
@@ -23,7 +25,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.APP.SERVER = "http://localhost:3000"
+    ENV.APP.SERVER = "http://localhost:3000";
   }
 
   if (environment === 'production') {
