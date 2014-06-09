@@ -3,15 +3,24 @@ html, body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
 #top-nav {
   background: #282828;
   color: white;
-  height: 30px;
+  height: 20px;
   padding: 4px 20px;
   display: flex;
   justify-content: space-between;
+  font-size: 12px;
   #title {
-    font-size: 18px;
+    font-size: 14px;
     color: cyan;
   }
 }
@@ -21,4 +30,50 @@ html, body {
 }
 
 .nav-item {
+}
+
+#post-list {
+  margin: 0;
+  padding: 0;
+  max-width: 700px;
+}
+
+.post-short {
+  margin: 0;
+  display: flex;
+  background: white;
+  //justify-content: space-between;
+  flex-direction: row;
+  margin: 5px 0;
+
+  .post-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0;
+    width: 80px;
+    font-size: 10px;
+  }
+  .post-content {
+    padding: 0;
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      -webkit-margin: 0;
+      -webkit-padding: 0;
+      margin: 0;
+      padding: 0;
+      height: auto;
+    }
+    .by {
+      font-size: 12px;
+      font-weight: bold;
+      color: red;
+      margin: 0;
+    }
+    .content {
+      margin: 0;
+    }
+  }
 }
