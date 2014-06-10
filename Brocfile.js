@@ -31,6 +31,7 @@ app.import('vendor/ember-simple-auth/ember-simple-auth.js');
 app.import('vendor/ember-simple-auth/ember-simple-auth-oauth2.js');
 app.import('vendor/momentjs/moment.js');
 app.import('vendor/epiceditor/epiceditor/js/epiceditor.js');
+app.import('vendor/JavaScript-MD5/js/md5.js');
 
 app.import('vendor/topcoat/css/topcoat-desktop-light.css')
 // If the library that you are including contains AMD or ES6 modules that

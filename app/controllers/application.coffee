@@ -1,6 +1,9 @@
 Controller = Em.Controller.extend
+  currentUser: Em.computed.alias "sessioncurrentUser"
+  email: Em.computed.alias "currentUser.email"
+
   loggedInName: (->
-    @get("session.currentUser.email") or ""
-  ).property("session.currentUser")
+    @get("email") or ""
+  ).property("email")
 
 `export default Controller`

@@ -2,12 +2,18 @@
   <div class="nav-item">
     <div id="title" {{action "index"}}>Emblog</div>
   </div>
+  {{#if session.currentUser.isContributor}}
+    <div class="nav-item">
+      {{#link-to "posts.my"}}My Posts{{/link-to}}
+    </div>
+  {{/if}}
+
   <div class="nav-item">
     {{#if session.isAuthenticated}}
-      Logged in as {{loggedInName}}&nbsp;
+      {{grav-atar email=email}}
       <button {{action 'invalidateSession'}} class="topcoat-button">Logout</button>
     {{else}}
-      Not logged in&nbsp;&nbsp;
+      <img src="img/topcoat/user.svg" height="18px" width="18px" >
       <button {{action 'authenticateSession' }} class="topcoat-button">Login</button>
       &nbsp;or&nbsp;
       {{#link-to "registration"}}Register{{/link-to}}

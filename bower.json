@@ -17,6 +17,8 @@
     "ember-simple-auth": "~0.3.1",
     "momentjs": "~2.6.0",
     "topcoat": "~0.8.0",
-    "epiceditor": "~0.2.2"
+    "epiceditor": "~0.2.2",
+    "topcoat-icons": "~0.2.0",
+    "JavaScript-MD5": "~1.1.0"
   }
 }
