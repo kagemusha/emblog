@@ -1,5 +1,7 @@
+import Ember from 'ember';
+
 var Router = Ember.Router.extend({
-  location: ENV.locationType
+  location: EmblogENV.locationType
 });
 
 Router.map(function() {

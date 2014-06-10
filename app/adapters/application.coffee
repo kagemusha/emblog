@@ -1,5 +1,5 @@
 Obj  = DS.ActiveModelAdapter.extend
-  host: ENV.APP.SERVER
+  host: EmblogENV.APP.SERVER
 
 `export default Obj`
 

@@ -11,6 +11,6 @@ auth =
     }
 
     Em.SimpleAuth.Authenticators.OAuth2.reopen
-      serverTokenEndpoint: ENV.APP.SERVER + "/oauth/token"
+      serverTokenEndpoint: EmblogENV.APP.SERVER + "/oauth/token"
 
 `export default auth`
