@@ -1,7 +1,11 @@
-<ul id="post-list">
-  {{#each post in sortedPosts}}
-    <li>
-      {{render "posts/short" post}}
-    </li>
-  {{/each}}
-</ul>
+{{#if hasPosts}}
+  <ul id="post-list">
+    {{#each post in sortedPosts}}
+      <li>
+        {{render "posts/short" post}}
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  Nothing published yet
+{{/if}}
