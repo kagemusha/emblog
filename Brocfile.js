@@ -5,6 +5,9 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var app = new EmberApp({
   name: require('./package.json').name,
 
+  // for some large projects, you may want to uncomment this (for now)
+  es3Safe: true,
+
   minifyCSS: {
     enabled: true,
     options: {}
@@ -26,7 +29,6 @@ var app = new EmberApp({
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-app.import('vendor/ember-data/ember-data.js');
 app.import('vendor/ember-simple-auth/ember-simple-auth.js');
 app.import('vendor/ember-simple-auth/ember-simple-auth-oauth2.js');
 app.import('vendor/momentjs/moment.js');
@@ -38,6 +40,15 @@ app.import('vendor/topcoat/css/topcoat-desktop-light.css')
 // you would like to import into your application please specify an
 // object with the list of modules as keys along with the exports of each
 // module as its value.
+app.import({
+  development: 'vendor/ember-data/ember-data.js',
+  production:  'vendor/ember-data/ember-data.prod.js'
+}, {
+  'ember-data': [
+    'default'
+  ]
+});
+
 app.import('vendor/ic-ajax/dist/named-amd/main.js', {
   'ic-ajax': [
     'default',
