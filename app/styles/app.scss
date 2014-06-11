@@ -10,6 +10,7 @@ a {
 ul {
   list-style-type: none;
 }
+
 img {
   background: cyan;
 }
@@ -37,6 +38,22 @@ img {
   }
 }
 
+#id-panel {
+  margin-right: 30px;
+  position: relative;
+}
+
+#id-form {
+  position: absolute;
+  border: 1px solid black;
+  padding: 4px;
+  top: 20px;
+  right: 20px;
+}
+
+.hidden {
+  display: none;
+}
 #content {
   margin: 26px 0 0 10px;
 }
@@ -68,6 +85,7 @@ img {
     width: 80px;
     font-size: 10px;
   }
+
   .post-content {
     padding: 0;
     .title {

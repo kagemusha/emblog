@@ -6,4 +6,7 @@ Controller = Em.Controller.extend
     @get("email") or ""
   ).property("email")
 
+  hoveringOnGravatar: false
+  hideIdForm: Em.computed.not("hoveringOnGravatar")
+
 `export default Controller`
