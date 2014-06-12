@@ -1,6 +1,8 @@
 /* global require, module */
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var mergeTrees = require('broccoli-merge-trees');
+var pickFiles = require('broccoli-static-compiler');
 
 var app = new EmberApp({
   name: require('./package.json').name,
@@ -42,6 +44,7 @@ app.import('vendor/topcoat/css/topcoat-desktop-light.css');
 // module as its value.
 
 app.import('vendor/topcoat-icons/svg/user.svg');
+
 app.import({
   development: 'vendor/ember-data/ember-data.js',
   production:  'vendor/ember-data/ember-data.prod.js'
@@ -61,5 +64,16 @@ app.import('vendor/ic-ajax/dist/named-amd/main.js', {
   ]
 });
 
+var epicEditorAssets = pickFiles('vendor/epiceditor/epiceditor/themes', {
+  srcDir: '/',
+  files: ["base/epiceditor.css","editor/epic-light.css","preview/github.css"],
+  destDir: 'assets/epiceditor/themes'
+});
 
-module.exports = app.toTree();
+var topcoatFonts = pickFiles('vendor/topcoat', {
+  srcDir: '/font',
+  files: ['SourceSansPro-Semibold.otf', 'SourceSansPro-Regular.otf'],
+  destDir: 'font'
+});
+
+module.exports = mergeTrees([app.toTree(), epicEditorAssets, topcoatFonts ]);
