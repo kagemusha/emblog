@@ -35,11 +35,13 @@ app.import('vendor/momentjs/moment.js');
 app.import('vendor/epiceditor/epiceditor/js/epiceditor.js');
 app.import('vendor/JavaScript-MD5/js/md5.js');
 
-app.import('vendor/topcoat/css/topcoat-desktop-light.css')
+app.import('vendor/topcoat/css/topcoat-desktop-light.css');
 // If the library that you are including contains AMD or ES6 modules that
 // you would like to import into your application please specify an
 // object with the list of modules as keys along with the exports of each
 // module as its value.
+
+app.import('vendor/topcoat-icons/svg/user.svg');
 app.import({
   development: 'vendor/ember-data/ember-data.js',
   production:  'vendor/ember-data/ember-data.prod.js'
