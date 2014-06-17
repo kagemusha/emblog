@@ -1,6 +1,8 @@
 <div id="top-nav">
   <div class="nav-item">
-    <div id="title" {{action "index"}}>Emblog</div>
+    <div id="title">
+         {{link-to "Emblog" "index"}}
+    </div>
   </div>
   {{#if session.currentUser.isContributor}}
     <div class="nav-item">
