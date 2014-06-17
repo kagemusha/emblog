@@ -1,4 +1,4 @@
-MyRoute = Ember.Route.extend
+MyRoute = Ember.Route.extend Ember.SimpleAuth.AuthenticatedRouteMixin,
 
   beforeModel: ->
     if not @get("session.currentUser.isContributor")
