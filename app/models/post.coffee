@@ -5,13 +5,14 @@ Obj = DS.Model.extend
   markdown: attr()
   html: attr()
   status: attr()
-  published: Em.computed.equal("status", "published")
+  publishedAt: attr()
   createdAt: attr()
-  publishedAt: Em.computed.alias("createdAt")  #FIX!!
+  isPublished: Em.computed.equal("status", "published")
 
   #author: DS.belongsTo("user")
   #comments: DS.hasMany("comments")
   #tags: DS.hasMany("tags")
+
 
 
 `export default Obj`
