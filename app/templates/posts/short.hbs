@@ -1,9 +1,9 @@
 <div class="post-short">
   <div class="post-date center-container">
       <div class="post-date-text absolute-center">
-        {{date-time date=publishedAt dateOnly=true}}
+        {{date-time date=publishedAt format='MMM D, YYYY'}}
         <br/>
-        {{date-time date=publishedAt timeOnly=true}}
+        {{date-time date=publishedAt format='h:mm a' showIfAgo=false}}
       </div>
   </div>
   <div class="post-content">

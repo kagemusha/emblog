@@ -3,27 +3,16 @@ HOURS = 1000*3600
 Obj = Em.Component.extend
   tagName: "span"
 
-  dateFormat: 'MMM D, YYYY'
-  timeFormat: 'h:mm a'
+  format: 'MMM D, YYYY h:mm a'
   agoHrs: 24
-  timeOnly: false
-  dateOnly: false
-
-  offsets: (->
+  showIfAgo: true
+  formattedDate: (->
     date = moment @get('date')
     offsetHrs = (Date.now() - date)/HOURS
     if offsetHrs < @get("agoHrs")
-      [date.fromNow(), ""]
+      if @get("showIfAgo") then date.fromNow() else ""
     else
-      [date.format(@get('dateFormat')), date.format(@get('timeFormat'))]
+      date.format(@get('format'))
   ).property("date")
-
-  formattedDate: (->
-    @get("offsets").objectAt(0)
-  ).property('offsets')
-
-  formattedTime: (->
-    @get("offsets").objectAt(1)
-  ).property('offsets')
 
 `export default Obj`
