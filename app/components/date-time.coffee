@@ -1,15 +1,18 @@
-HOURS = 1000*3600
 
 Obj = Em.Component.extend
   tagName: "span"
 
   format: 'MMM D, YYYY h:mm a'
-  agoHrs: 24
   showIfAgo: true
+
+  agoHrs: 24
+  agoCutoff: (->
+    moment(Date.now()).subtract("hour", this.get("agoHrs"))
+  ).property("agoHrs")
+
   formattedDate: (->
     date = moment @get('date')
-    offsetHrs = (Date.now() - date)/HOURS
-    if offsetHrs < @get("agoHrs")
+    if date > this.get("agoCutoff")
       if @get("showIfAgo") then date.fromNow() else ""
     else
       date.format(@get('format'))
